@@ -1,0 +1,1 @@
+//package com.licitacija.mk.notifications.repository;////import com.licitacija.mk.notifications.domain.Client;//import org.springframework.data.mongodb.repository.MongoRepository;////public interface ClientRepository extends MongoRepository<Client,String> {////    Client findByUsername(String userName);////}
