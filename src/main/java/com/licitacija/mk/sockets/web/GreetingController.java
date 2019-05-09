@@ -1,7 +1,7 @@
-package com.licitacija.mk.multipleChatRooms.web;
+package com.licitacija.mk.sockets.web;
 
-import com.licitacija.mk.multipleChatRooms.mongoModel.OfferMongo;
-import com.licitacija.mk.multipleChatRooms.mongoRepository.OfferMongoRepository;
+import com.licitacija.mk.sockets.mongoModel.OfferMongo;
+import com.licitacija.mk.sockets.mongoRepository.OfferMongoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
@@ -31,6 +31,8 @@ public class GreetingController {
         logger.info("Greeting for {}", destination);
         OfferMongo offerMongo = new OfferMongo();
         offerMongo.setBody(destination);
+        offerMongo.setWhichProduct(greetings);
+        logger.info("Saved in repository  for {}", offerMongo.getWhichProduct());
         repository.save(offerMongo);
         this.simpMessagingTemplate.convertAndSend(format("/topic/%s", greetings), destination);
     }

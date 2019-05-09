@@ -1,4 +1,4 @@
-package com.licitacija.mk.multipleChatRooms.mongoModel;
+package com.licitacija.mk.sockets.mongoModel;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,12 +11,15 @@ public class OfferMongo {
 
     private String body;
 
-    public OfferMongo() {
+    private String whichProduct;
+
+
+    public String getWhichProduct() {
+        return whichProduct;
     }
 
-    public OfferMongo(String id, String body) {
-        this.id = id;
-        this.body = body;
+    public void setWhichProduct(String whichProduct) {
+        this.whichProduct = whichProduct;
     }
 
     public String getId() {

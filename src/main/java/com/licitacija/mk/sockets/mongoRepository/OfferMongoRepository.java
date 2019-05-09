@@ -1,6 +1,6 @@
-package com.licitacija.mk.multipleChatRooms.mongoRepository;
+package com.licitacija.mk.sockets.mongoRepository;
 
-import com.licitacija.mk.multipleChatRooms.mongoModel.OfferMongo;
+import com.licitacija.mk.sockets.mongoModel.OfferMongo;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
