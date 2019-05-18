@@ -1,1 +1,0 @@
-//package com.licitacija.mk.chatServer.chat;////import org.springframework.data.jpa.repository.JpaRepository;////public interface ChatServerRepository extends JpaRepository<ChatServer,Long> {//}

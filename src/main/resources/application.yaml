@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: Licitacija
+  datasource:
+    url: jdbc:postgresql://localhost:5432/licitacija
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  # Hibernate JPA configuration
+  jpa:
+    hibernate:
+      ddl-auto: create
+  #    show-sql: true
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 886680492320-bo7pnuqoi7b59gmth3n0pbgf5pg1hl12.apps.googleusercontent.com
+            clientSecret: loM41wzb_JcZgbwFoqAYCg0v
+            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+
+
+app:
+  auth:
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMsec: 864000000
+  oauth2:
+    # After successfully authenticating with the OAuth2 Provider,
+    # we'll be generating an auth token for the user and sending the token to the
+    # redirectUri mentioned by the frontend client in the /oauth2/authorize request.
+    # We're not using cookies because they won't work well in mobile clients.
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
+
