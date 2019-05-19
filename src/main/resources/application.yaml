@@ -26,6 +26,14 @@ spring:
             scope:
               - email
               - profile
+          github:
+            clientId: 0ac0bdcd62b0f21b6c31
+            clientSecret: 450571a6b893557c1fcf27121c3a19c1ef3ae638
+            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - user:email
+              - read:user
+
 
 
 app:

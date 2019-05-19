@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
+import PrivateRoute from "../common/PrivateRoute";
+import Chat from "../app/chat/Chat";
 
 class Home extends Component {
     render() {
@@ -8,6 +10,7 @@ class Home extends Component {
                 <div className="container">
                     <div className="graf-bg-container">
                         <div className="graf-layout">
+                            <div className="graf-circle"></div>
                             <div className="graf-circle"></div>
                             <div className="graf-circle"></div>
                             <div className="graf-circle"></div>

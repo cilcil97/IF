@@ -18,6 +18,9 @@ class AppHeader extends Component {
                                             <NavLink to="/profile">Profile</NavLink>
                                         </li>
                                         <li>
+                                            <NavLink to="/chat">Chat</NavLink>
+                                        </li>
+                                        <li>
                                             <a onClick={this.props.onLogout}>Logout</a>
                                         </li>
                                     </ul>

@@ -1332,7 +1332,7 @@ Different projects choose different testing tradeoffs based on how often compone
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from Chat;
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -1391,7 +1391,7 @@ Here is an example from Enzyme documentation that asserts specific output, rewri
 ```js
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App from Chat;
 
 it('renders welcome message', () => {
   const wrapper = shallow(<App />);
@@ -1460,7 +1460,7 @@ Here's an example of using `react-testing-library` and `jest-dom` for testing th
 ```js
 import React from 'react';
 import { render } from 'react-testing-library';
-import App from './App';
+import App from Chat;
 
 it('renders welcome message', () => {
   const { getByText } = render(<App />);

@@ -18,6 +18,7 @@ import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import './App.css';
+import Chat from "./chat/Chat";
 
 class App extends Component {
     constructor(props) {
@@ -80,6 +81,8 @@ class App extends Component {
                         <PrivateRoute path="/profile" authenticated={this.state.authenticated}
                                       currentUser={this.state.currentUser}
                                       component={Profile}/>
+                        <PrivateRoute path="/chat" authenticated={this.state.authenticated}
+                                      component={Chat}/>
                         <Route path="/login"
                                render={(props) => <Login
                                    authenticated={this.state.authenticated} {...props} />}/>
@@ -88,6 +91,7 @@ class App extends Component {
                                    authenticated={this.state.authenticated} {...props} />}/>
                         <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}/>
                         <Route component={NotFound}/>
+
                     </Switch>
                 </div>
                 <Alert stack={{limit: 3}}

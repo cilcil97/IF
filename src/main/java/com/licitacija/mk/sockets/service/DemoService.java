@@ -22,10 +22,10 @@ public class DemoService {
 
     //HTTP STOP
 
-    @Scheduled(cron = "*/5 * * * * *")
-    public void performTask() {
-        Instant now = Instant.now();
-        logger.info("Scheduled task performed at {} (ISO 8601 date and time format)", now);
-        this.simpMessagingTemplate.convertAndSend("/queue/now", now);
-    }
+//    @Scheduled(cron = "*/5 * * * * *")
+//    public void performTask() {
+//        Instant now = Instant.now();
+//        logger.info("Scheduled task performed at {} (ISO 8601 date and time format)", now);
+//        this.simpMessagingTemplate.convertAndSend("/queue/now", now);
+//    }
 }

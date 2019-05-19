@@ -1,5 +1,7 @@
-package com.licitacija.mk.config;
+package com.licitacija.mk.controllers.rest;
 
+import com.licitacija.mk.config.CurrentUser;
+import com.licitacija.mk.config.UserPrincipal;
 import com.licitacija.mk.models.User;
 import com.licitacija.mk.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
